@@ -1,31 +1,29 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Page de statut de Nexus Gestion (Upptime, gratuit : GitHub Actions, Issues et Pages).
+owner: bertolis-dev
+repo: nexus-statut
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Application et site public
+    url: https://bertolis-dev.github.io/nexus-gestion/app/
+  - name: Base de données et connexion (Supabase)
+    url: https://socvvthikxaubehihewl.supabase.co/auth/v1/health
+    headers:
+      - "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvY3Z2dGhpa3hhdWJlaGloZXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAzMzUxOTQsImV4cCI6MjEwNTkxMTE5NH0.LxMc1yiKjDfxEQQr-dMxO3f5G_pB9BDZnErmZPKeiaA"
+  - name: Recherche d'entreprises (API publique utilisée par Nexus)
+    url: https://recherche-entreprises.api.gouv.fr/search?q=732829320&per_page=1
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /nexus-statut
+  name: Statut de Nexus Gestion
+  introTitle: "**Nexus Gestion** — état des services"
+  introMessage: Disponibilité de l'application, de la base de données et des services publics utilisés, vérifiée toutes les 5 minutes.
   navbar:
-    - title: Status
+    - title: Statut
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Nexus Gestion
+      href: https://bertolis-dev.github.io/nexus-gestion/app/
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  up: Opérationnel
+  down: Indisponible
+  degraded: Dégradé
